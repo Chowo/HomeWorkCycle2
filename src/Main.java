@@ -6,7 +6,6 @@ public class Main {
         int monthlyInvestment = 15000;
         int goalMonths = 0;
         while (totalIncome < 2_459_000) {
-            totalIncome = totalIncome * 1.01;
             totalIncome += monthlyInvestment;
             goalMonths++;
         }
@@ -28,10 +27,10 @@ public class Main {
         //Task 03
         System.out.println("Task 03");
         int population = 12_000_000;
-        int birthRateYearlyIncrease = 17 * population / 1000;
-        int mortalityRateYearlyDecrease = 8 * population / 1000;
+        int birthRate = 17;
+        int mortalityRate = 8;
         for (int i = 1; i <= 10; i++) {
-            population = population + birthRateYearlyIncrease - mortalityRateYearlyDecrease;
+            population = population + (birthRate - mortalityRate) * population / 1000;
             System.out.printf("Год %s, численность населения составляет %s человек%n", i, population);
         }
 
